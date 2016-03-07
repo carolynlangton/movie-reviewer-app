@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 x:Class="MovieReviewer.ReviewPage"
+			 Title="Details">
+	<ScrollView>
+		<StackLayout Padding="20">
+			<Label Text="Title" />
+			<Entry x:Name="titleEntry" Text="{Binding MovieTitle}" />
+
+			<Label Text="Review Date" />
+			<DatePicker Date="{Binding ReviewDate}" />
+
+			<Label Text="Rating" />
+			<Entry x:Name="ratingEntry" Text="{Binding Rating}" />
+
+			<Editor x:Name="reviewEditor"
+					Text="{Binding Review}"
+					VerticalOptions="FillAndExpand"
+					BackgroundColor="#eee" />
+
+			<Button x:Name="saveButton" Text="Save" />
+			<Button x:Name="deleteButton" Text="Delete" />
+			<Button x:Name="speakButton" Text="Speak" />
+		</StackLayout>
+	</ScrollView>
+</ContentPage>
